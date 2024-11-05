@@ -1,5 +1,5 @@
 class Animal:
-    alive = True
+    alive = True # Атрибут класса
     fed = False
 
     def __init__(self, name):
