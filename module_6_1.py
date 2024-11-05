@@ -1,24 +1,24 @@
 class Animal:
-    alive = True  # Атрибут класса
-    fed = False   # Атрибут класса
+    alive = True
+    fed = False
 
     def __init__(self, name):
         self.name = name  # Атрибут экземпляра
 
     def eat(self, food):
-        if food.edible:  # Проверяем съедобность переданного объекта
-            Animal.fed = True  # Обновляем атрибут класса fed
+        if food.edible:
+            Animal.fed = True
             print(f"{self.name} съел {food.name}")
         else:
-            Animal.alive = False  # Обновляем атрибут класса alive
+            Animal.alive = False
             print(f"{self.name} не стал есть {food.name}")
 
 
 class Plant:
-    edible = False  # Атрибут класса
+    edible = False
 
     def __init__(self, name):
-        self.name = name  # Атрибут экземпляра
+        self.name = name
 
 
 class Mammal(Animal):
@@ -32,13 +32,13 @@ class Predator(Animal):
 class Flower(Plant):
     def __init__(self, name):
         super().__init__(name)
-        self.edible = False  # Оставляем несъедобным
+        self.edible = False
 
 
 class Fruit(Plant):
     def __init__(self, name):
         super().__init__(name)
-        self.edible = True  # Делаем съедобным
+        self.edible = True
 
 
 # Проверка работы программы
